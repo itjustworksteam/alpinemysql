@@ -2,7 +2,7 @@ sudo: required
 services:
   - docker
 script:
-  - docker build -t alpinemysql .
+  - docker build -t therickys93/alpinemysql .
 after_success:
   - if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
     docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
